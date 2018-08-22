@@ -1,0 +1,57 @@
+<wxs module='weatherDataFiledsHandle' src='./weather.wxs' />
+<view class='container'>
+  <!--  fixed background  -->
+  <view class='bcg'></view>
+  <!--  search part  -->
+  <view class='search'>
+    <view class='flex' bindtap='searchCity'>
+      <icon type='search' size='14' color='#fff'></icon>
+      <text>查询其他城市</text>
+    </view>
+  </view>
+  <!--  content part  -->
+  <view class='content' wx:if='{{weatherData}}'>
+    <view class='flex'>
+      <view class='center'>
+        <view class='city'>{{weatherData.currentCity}}</view>
+        <view class='temperature'>{{weatherDataFiledsHandle.dateToTemp(weatherData.weather_data[0].date)}}<text style='font-size:120rpx'>°</text></view>
+        <view>{{weatherData.weather_data[0].weather}}</view>
+        <view class='air'><text>{{weatherDataFiledsHandle.calcPm25(weatherData.pm25).desc}} {{weatherData.pm25}}</text></view>
+      </view>
+      <view class='right'>
+        <view>{{updateTime}} 更新</view>
+      </view>
+    </view>
+  </view>
+  <!--  future three day weather  -->
+  <view class='weather flex' wx:if='{{weatherData}}'>
+    <view wx:for='{{weatherData.weather_data}}' wx:key='{{date}}'>
+      <view>{{index === 0 ? '今天' : item.date}}</view>
+      <view>{{item.temperature}}</view>
+      <view>{{item.weather}}</view>
+      <view>{{item.wind}}</view>
+    </view>
+  </view>
+  <!--  advice part  -->
+  <view class='advice' wx:if='{{weatherData}}'>
+    <view
+      class='flex'
+      wx:for='{{weatherData.index}}'
+      wx:key='{{tipt}}'
+      style="border-bottom: {{index === 4 ?'none' : '1rpx solid rgba(255, 255, 255, .2)'}}"
+    >
+      <view class='img'>
+        <image src="{{'../../img/' + adviceIcons[index]}}"></image>
+      </view>
+      <view class='desc'>
+        <view class='title'>{{item.tipt}} {{item.zs}}</view>
+        <view class='detail'>{{item.des}}</view>
+      </view>
+    </view>
+  </view>
+  <!--  thanks part  -->
+  <view class='thanks'>
+    <text>数据来源 百度地图开放平台</text>
+  </view>
+  
+</view>

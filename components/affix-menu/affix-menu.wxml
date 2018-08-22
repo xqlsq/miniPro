@@ -1,0 +1,4 @@
+<view class='menus' style='top:{{pos.top}}px;left:{{pos.left}}px;'>
+    <image wx:for='{{menus}}' src="{{item.img}}" wx:key='{{index}}' animation="{{item.animation}}" data-key='{{index}}' class="menu" bindtap="onMenuClick"></image>
+    <image src="/img/menu.png" animation="{{mainAnimation}}" class="menu main" bindtap="onMainMenuClick" catchtouchmove='onMove'></image>
+</view>

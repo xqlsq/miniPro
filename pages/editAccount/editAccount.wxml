@@ -1,0 +1,26 @@
+<view class='container'>
+    <view class="section">
+        <view class="section__title">消费项目</view>
+        <input placeholder="说说你今天买了点啥..." bindinput='projectChange' value='{{project}}' />
+    </view>
+
+    <view class="section">
+        <view class="section__title">金额(元)</view>
+        <input placeholder="多少RMB"  type='number' bindinput='rmbChange' value='{{rmb}}' />
+    </view>
+
+    <view class="section">
+        <view class="section__title">标签</view>
+        <picker range="{{tags}}" bindchange="bindPickerChange" value='{{tagIndex}}'>
+            <view class="picker">
+                <text wx:if='{{tags[tagIndex]}}' class='tag'>{{tags[tagIndex]}}</text>
+                <text wx:else>请选择一个标签</text>
+            </view>
+        </picker>
+    </view>
+
+    <view class="btn-area">
+        <button type='primary' class='submit' bindtap='submit'>确认</button>
+        <button bindtap='cancel'>取消</button>
+    </view>
+</view>

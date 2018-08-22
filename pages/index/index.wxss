@@ -1,0 +1,154 @@
+.container {
+    height: 100vh;
+    overflow: hidden;
+}
+.container .bgm {
+    position: fixed;
+    z-index: -1;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+}
+.birth,.flower {
+    top: -72rpx;
+    width: 72rpx;
+    height: 72rpx;
+    position: absolute;
+    /* animation:fall0 linear 10s infinite; */
+}
+.modal {
+    position: fixed;
+    z-index: 1000;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+.modal image {
+    position: absolute;
+    top: 120px;
+    width: 60px;
+    height: 60px;
+}
+.modal text{
+    color: #ffff;
+    font-size: 36rpx;
+}
+@keyframes fall1 {
+    0% {top: -72px; left: 74px;}
+    100% {top: 603px; left: 200px;}
+}
+@keyframes fall2 {
+    0% {top: -72px; left: 126px;}
+    100% {top: 603px; left: 152px;}
+}
+@keyframes fall3 {
+    0% {top: -72px; left: 12px;}
+    100% {top: 603px; left: -35px;}
+}
+@keyframes fall4 {
+    0% {top: -72px; left: 273px;}
+    100% {top: 603px; left: 396px;}
+}
+@keyframes fall5 {
+    0% {top: -72px; left: 17px;}
+    100% {top: 603px; left: -41px;}
+}
+@keyframes fall6 {
+    0% {top: -72px; left: 57px;}
+    100% {top: 603px; left: -42px;}
+}
+@keyframes fall7 {
+    0% {top: -72px; left: 39px;}
+    100% {top: 603px; left: -1px;}
+}
+@keyframes fall8 {
+    0% {top: -72px; left: 265px;}
+    100% {top: 603px; left: 191px;}
+}
+@keyframes fall9 {
+    0% {top: -72px; left: 290px;}
+    100% {top: 603px; left: 235px;}
+}
+@keyframes fall10 {
+    0% {top: -72px; left: 194px;}
+    100% {top: 603px; left: 284px;}
+}
+@keyframes fall11 {
+    0% {top: -72px; left: 10px;}
+    100% {top: 603px; left: 80px;}
+}
+@keyframes fall12 {
+    0% {top: -72px; left: 224px;}
+    100% {top: 603px; left: 320px;}
+}
+@keyframes fall13 {
+    0% {top: -72px; left: 194px;}
+    100% {top: 603px; left: 153px;}
+}
+@keyframes fall14 {
+    0% {top: -72px; left: 318px;}
+    100% {top: 603px; left: 254px;}
+}
+@keyframes fall0 {
+    0% {top: -72px; left: 117px;}
+    100% {top: 603px; left: -36px;}
+}
+@keyframes fall15 {
+    0% {top: -72px; left: 109px;}
+    100% {top: 603px; left: 97px;}
+}
+@keyframes fall16 {
+    0% {top: -72px; left: 164px;}
+    100% {top: 603px; left: 360px;}
+}
+@keyframes fall17 {
+    0% {top: -72px; left: 137px;}
+    100% {top: 603px; left: 182px;}
+}
+@keyframes fall18 {
+    0% {top: -72px; left: 225px;}
+    100% {top: 603px; left: 234px;}
+}
+/* @keyframes fall19 {
+    0% {top: -72px; left: 308px;}
+    100% {top: 603px; left: 167px;}
+} */
+
+@keyframes flower0 {
+    0% {top: -72px; left: 2px; transform: rotateZ(0deg)}
+    100% {top: 603px; left: 185px; transform: rotateZ(2400deg)}
+}@keyframes flower1 {
+    0% {top: -72px; left: 308px; transform: rotateZ(0deg)}
+    100% {top: 603px; left: 234px; transform: rotateZ(2400deg)}
+}@keyframes flower2 {
+    0% {top: -72px; left: 89px; transform: rotateZ(0deg)}
+    100% {top: 603px; left: -10px; transform: rotateZ(2400deg)}
+}@keyframes flower3 {
+    0% {top: -72px; left: 187px; transform: rotateZ(0deg)}
+    100% {top: 603px; left: 20px; transform: rotateZ(2400deg)}
+}@keyframes flower4 {
+    0% {top: -72px; left: 277px; transform: rotateZ(0deg)}
+    100% {top: 603px; left: 28px; transform: rotateZ(2400deg)}
+}@keyframes flower5 {
+    0% {top: -72px; left: 123px; transform: rotateZ(0deg)}
+    100% {top: 603px; left: 306px; transform: rotateZ(2400deg)}
+}@keyframes flower6 {
+    0% {top: -72px; left: 172px; transform: rotateZ(0deg)}
+    100% {top: 603px; left: -12px; transform: rotateZ(2400deg)}
+}@keyframes flower7 {
+    0% {top: -72px; left: 225px; transform: rotateZ(0deg)}
+    100% {top: 603px; left: 400px; transform: rotateZ(2400deg)}
+}

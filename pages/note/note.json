@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "记事本",
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "disableScroll": true,
+    "usingComponents": {
+        "swipe": "/components/swipe/swipe"
+    }
+  }

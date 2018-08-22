@@ -1,0 +1,36 @@
+<view class='container'>
+   <view class='search flex' style="position:{{searchPageVisible ? 'relative' : 'fixed'}}">
+      <image class='icon' src='/img/search_grey.png'></image>
+      <input focus='true' placeholder='搜索城市' value='{{inputText}}' bindinput="onSearch"></input>
+      <text class='clear' bindtap='clearInput'>清空</text>
+      <view class='location' data-city='{{locationCity}}' bindtap='onChooseCity'>
+        <image src='/img/map.png'></image>
+        <text> 当前定位城市</text>
+        <text class='fixlocation'>{{locationCity}}</text>
+      </view>
+  </view> 
+  <view class='historySearch' style='margin-top: {{top}}px' wx:if="{{historyList.length !== 0 && !searchPageVisible}}">
+    <view class='title flex'>
+      <text>历史搜索</text>
+      <image src='/img/delete.png' bindtap='clearHistory'></image></view>
+    <view class='bagelist flex'>
+      <text class='bage' wx:for='{{historyList}}' wx:key='{{item}}' data-city='{{item}}' bindtap='onChooseCity'>{{item}}</text>
+    </view>
+  </view> 
+  <view class='cityList ' wx:if='{{!searchPageVisible}}'>
+    <view wx:for='{{cityList.keys}}' wx:for-item='letter' wx:key='letter'  class='letter{{letter}} stickyContanier'>
+      <view class="letter sticky">{{letter}}</view>
+      <view class='city' wx:for='{{cityList[letter]}}' wx:for-item='city'  wx:key='city' data-city='{{city}}' bindtap='onChooseCity'>
+        <view>{{city}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='searchList' wx:if='{{searchPageVisible}}'>
+    <view class='city' wx:for='{{searchList}}' wx:for-item='city'  wx:key='city' data-city='{{city.name}}' bindtap='onChooseCity'>
+      <view>{{city.name}}</view>
+    </view>
+  </view>
+  <view class='slider' wx:if='{{!searchPageVisible}}'>
+		<view wx:for='{{cityList.keys}}' wx:key='item' data-key="{{index}}" bindtap="scrollTo">{{item}}</view>
+  </view>
+</view>

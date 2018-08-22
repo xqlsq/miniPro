@@ -1,0 +1,54 @@
+function dateToTemp(date) {// 获取温度
+  var reg = getRegExp('\：(\d+)℃');
+  return date.match(reg)[1];
+}
+function calcPm25(value) {
+  if (value > 0 && value <= 50) {
+    return {
+      val: value,
+      desc: '优',
+      detail: '',
+    }
+  } else if (value > 50 && value <= 100) {
+    return {
+      val: value,
+      desc: '良',
+      detail: '',
+    }
+  } else if (value > 100 && value <= 150) {
+    return {
+      val: value,
+      desc: '轻度污染',
+      detail: '对敏感人群不健康',
+    }
+  } else if (value > 150 && value <= 200) {
+    return {
+      val: value,
+      desc: '中度污染',
+      detail: '不健康',
+    }
+  } else if (value > 200 && value <= 300) {
+    return {
+      val: value,
+      desc: '重度污染',
+      detail: '非常不健康',
+    }
+  } else if (value > 300 && value <= 500) {
+    return {
+      val: value,
+      desc: '严重污染',
+      detail: '有毒物',
+    }
+  } else if (value > 500) {
+    return {
+      val: value,
+      desc: '爆表',
+      detail: '能出来的都是条汉子',
+    }
+  }
+}
+
+module.exports = {
+  dateToTemp: dateToTemp,
+  calcPm25: calcPm25
+}

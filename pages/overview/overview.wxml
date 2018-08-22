@@ -1,0 +1,9 @@
+<view class='container'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{dateKeys}}">
+        <view class="picker" style='text-align: center'>
+        显示数据时间：{{dateKeys[index]}}
+        </view>
+    </picker>
+    <canvas canvas-id="pie" style='height: 300px;width: 100%;margin-bottom: 10px;'></canvas>
+     <canvas canvas-id="line" style='height: 300px;width: 100%;'></canvas>
+</view>

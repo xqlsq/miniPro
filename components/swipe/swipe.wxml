@@ -1,0 +1,16 @@
+<view class='swipe' bindtouchstart='touchS' bindtouchmove='touchM' bindtouchend='touchE'>
+    <view class="md {{!isMovingLeft && 'transition'}}" style='width: {{containerWidth + (moveX < 0 && -moveX > buttonWidth ? -moveX : buttonWidth)}}px;transform: translateX({{moveX < 0 ? moveX : 0}}px)'>
+        <view class='content'>
+            <view class='col' style='line-height: 100rpx;'>{{data.project}}</view>
+            <view class='col' style='line-height: 100rpx;'>{{data.rmb}}</view>
+            <view class='col tags'>
+                <text wx:if='{{tags[data.tagIndex]}}' class='tag'>{{tags[data.tagIndex]}}</text>
+            </view>
+        </view>
+        <text
+            class="hiddenHandle delete {{!isMovingLeft && 'transition'}}"
+            catchtap='delete'
+            style='padding-right: {{moveX < 0 && -moveX > buttonWidth && (-moveX - buttonWidth + 15) }}px'
+        >删除</text>
+    </view>
+</view>

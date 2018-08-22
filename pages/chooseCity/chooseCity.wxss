@@ -1,0 +1,108 @@
+@import '/libs/common';
+
+.container {
+  min-height: 100vh;
+}
+.search {
+  height: 180rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-wrap: wrap;
+  padding: 30rpx 32rpx;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #efefef;
+}
+.location {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 16rpx;
+}
+.location image {
+  width: 24rpx;
+  height: 24rpx;
+}
+.fixlocation {
+  font-weight: bold;
+}
+.search .icon {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  left: 50rpx;
+  top: 50rpx;
+}
+.search input {
+  width: 520rpx;
+  border-radius: 6rpx;
+  padding: 10rpx;
+  padding-left: 60rpx;
+  font-size: 28rpx;
+  background-color: #f2f2f2;
+}
+.search .clear {
+  padding-left: 20rpx;
+  font-size: 32rpx;
+  color: #ffa000;
+  align-self: center;
+}
+.cityList,.searchList {
+  color: #333;
+  font-size: 32rpx;
+}
+.cityList .letter {
+  font-size: 32rpx !important;
+  box-sizing: border-box;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 180rpx;
+  padding: 0 32rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #f2f2f2;
+}
+.city {
+  padding: 32rpx;
+  border-bottom: 2rpx solid #efefef;
+}
+.historySearch {
+  padding: 32rpx 32rpx 0 32rpx;
+}
+.historySearch .title {
+  color: #999;
+  justify-content: space-between;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.historySearch .title image {
+  width: 28rpx;
+  height: 28rpx;
+  align-self: center;
+}
+.bagelist {
+  flex-wrap: wrap;
+}
+.bage {
+  margin: 0 18rpx 18rpx 0;
+  font-size: 26rpx;
+  color: #666;
+  padding: 10rpx;
+  background: #efefef;
+  border-radius: 10rpx;
+}
+.slider {
+  position: fixed;
+  right: 4rpx;
+  top: 360rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.slider>view{
+  height: 32rpx;
+  padding: 2rpx;
+}

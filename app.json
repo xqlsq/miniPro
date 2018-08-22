@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/note/note",
+    "pages/weather/weather",
+    "pages/chooseCity/chooseCity",
+    "pages/editAccount/editAccount",
+    "pages/test/test",
+    "pages/overview/overview"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "Shimmer",
+    "navigationBarTextStyle": "light"
+  }
+}

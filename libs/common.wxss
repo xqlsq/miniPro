@@ -1,0 +1,6 @@
+.flex{
+  display: -o-flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+}

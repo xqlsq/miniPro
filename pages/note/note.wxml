@@ -1,0 +1,39 @@
+<view class='container' bindtap='containerTap'>
+    <view>
+        <view class='row'>
+            <view class='col'>消费项目</view>
+            <view class='col'>金额(元)</view>
+            <view class='col'>标签</view>
+        </view>
+    </view>
+    <view class='scroll' bindtouchstart='touchstart'>
+        <scroll-view scrollY='{{scrollY}}'  bindscroll='scroll' style='height: {{scrollHeight}}px'>
+            <swipe wx:for='{{datas}}' bindtap='modifyItem' data-index='{{index}}' bindcanscroll='canScroll' bindactive='active' binddelete='delete' wx:key='{{index}}' data='{{item}}' index='{{index}}'></swipe>
+            <view class='total'>
+                <text>总计(元): {{total}}</text>
+                <text bindtap='toOverview' style='float: right; margin-right: 20px;'>查看全部</text>
+            </view>
+        </scroll-view>
+    </view>
+    <view>
+        <view class='date'>
+            <view class='prev' bindtap='prevDate'>
+                <image src='/img/arrow.png'></image>
+                前一天
+            </view>
+            <picker class='now' mode="date" value="{{date}}" end="{{now}}" bindchange="bindDateChange">
+                <view class="picker">
+                    <image src='/img/time.png'></image>
+                    {{date}}
+                </view>
+            </picker>
+            <view wx:if='{{now !== date}}' class='next' bindtap='nextDate'>
+                后一天
+                <image src='/img/arrow.png'></image>
+            </view>
+            <view class='add' bindtap='addItem'>
+                新增
+            </view>
+        </view>
+    </view>
+</view>

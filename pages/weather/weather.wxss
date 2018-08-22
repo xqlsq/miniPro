@@ -1,0 +1,108 @@
+@import '../../libs/common.wxss';
+
+.container {
+  color: #fff;
+  font-weight: 300; 
+  font-size: 30rpx;
+}
+.container>view{
+  z-index: 4;
+  position: relative;
+}
+.container .bcg{
+  position: fixed;
+  background-color: #40a7e7;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.search>view {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #fff;
+}
+.search icon {
+  position: relative;
+  top: 10rpx;
+  padding: 0 12rpx;
+}
+.content {
+  margin-top: 60rpx;
+}
+.content>.flex {
+  justify-content: flex-end;
+}
+.content>.flex>.right {
+  width: 33.33%;
+  text-align: center;
+}
+.content>.flex>.center {
+  width: 40%;
+  text-align: center;
+}
+.center .city {
+  font-size: 40rpx;
+}
+.right>view {
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+.center .temperature {
+  font-size: 200rpx;
+  margin: 60rpx 0;
+}
+.center .air text {
+  font-size: 22rpx;
+  background-color: rgba(255, 255, 255, .2);
+  display: inline-block;
+  width: 100rpx;
+  padding: 6rpx;
+  border-radius: 50rpx;
+  margin-top: 30rpx;
+  margin-bottom:  50rpx;
+}
+.weather {
+  background-color: rgba(0, 0, 0, .1);
+  margin-bottom: 20rpx;
+}
+.weather > view {
+  width: 25%;
+  text-align: center;
+  font-size: 22rpx;
+}
+.weather > view > view {
+  margin: 20rpx 0;
+}
+.advice {
+  background-color: rgba(0, 0, 0, .1);
+  padding: 0 24rpx;
+}
+.advice .flex {
+  padding: 24rpx 0;
+}
+.advice .desc{
+  flex-grow: 1;
+}
+.advice .desc .detail {
+  font-size: 24rpx;
+  margin-top: 12rpx;
+}
+.advice .img {
+  align-self: center;
+  padding: 0 24rpx;
+}
+.advice .img image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.thanks { 
+  font-size: 22rpx;
+  height: 100rpx;
+  line-height: 120rpx;
+  text-align: center;
+}

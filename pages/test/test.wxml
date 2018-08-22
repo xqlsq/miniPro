@@ -1,0 +1,21 @@
+<scroll-view scroll-y class="left-wrapper" id="left">
+  <view wx:for="..." bindtap="..."></view>
+  <!--这里是左侧的类型选择-->
+</scroll-view>
+<scroll-view scroll-y
+             class="right-wrapper"
+             bindscroll="onScroll"
+             scroll-into-view="{{toView}}"
+             id="right">
+  <view wx:for="{{items}}" wx-for-item="item" class="lists" id="{{item.title}}">
+    <view class="type-title" style="{{style}}">
+      <!-- 这个就是ticky header部分 -->
+      {{item.title}}
+    </view>
+    <view class="content">
+      <view wx:for="{{item.child}}" class="item">
+        <!--这里是需要展示具体的列表项-->
+      </view>
+    </view>
+  </view>
+</scroll-view>
