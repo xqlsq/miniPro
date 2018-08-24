@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "affix-menu": "/components/affix-menu/affix-menu"
+  },
+  "navigationBarBackgroundColor": "#a8d9fa",
+  "navigationBarTitleText": "生日快乐🎂"
+}

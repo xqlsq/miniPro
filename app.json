@@ -6,6 +6,7 @@
     "pages/chooseCity/chooseCity",
     "pages/editAccount/editAccount",
     "pages/test/test",
+    "pages/birthday/birthday",
     "pages/overview/overview"
   ],
   "window": {

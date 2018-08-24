@@ -1,0 +1,23 @@
+<view class="container">
+  <image src="/img/bac.jpg" class='bgm'></image>
+  <affix-menu menusInfo='{{menusInfo}}' screenRect='{{screenRect}}'></affix-menu>
+  <view wx:for='{{births}}' wx:key='{{item.key}}'>
+      <image
+        class='birth'
+        src='{{item.url}}'
+        bindtap='surprise'
+        style='animation:fall{{index}} 10s linear {{index*500}}ms infinite;'
+    ></image>
+  </view>
+  <view wx:for='{{flowers}}' wx:key='{{item.key}}'>
+    <image
+      class='flower'
+      src='{{item.url}}'
+      style='animation:flower{{index}} 14s linear {{index*2000}}ms infinite;'
+  ></image>
+</view>
+  <view class='modal' bindtap='close' style="visibility: {{showModal ? 'visible' : 'hidden'}};">
+    <image animation='{{heartAnimation}}' src='/img/heart.png'></image>
+    <text>{{wish}}</text>
+  </view>
+</view>
